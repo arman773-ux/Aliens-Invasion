@@ -1,0 +1,7 @@
+import java.awt.*; import javax.swing.*;
+public class Laser extends Sprite {
+private int stepSize; private ImageIcon LaserImage;
+public Laser(int initialX, int initialY) { x = initialX; y = initialY; width = 5; height = 10; stepSize = 10; LaserImage = new ImageIcon("laser.png"); }
+public void draw(JPanel panel) { Graphics paper = panel.getGraphics(); LaserImage.paintIcon(this, paper, x, y); }
+public void move() { y = y - stepSize; }
+}
